@@ -190,11 +190,6 @@ func IsWebp(r io.ReadSeeker) bool {
 	return genericCompareBuffer(r, WEBP)
 }
 
-// IsSvg function will return true if File is a valid SVG
-func IsSvg(r io.ReadSeeker) bool {
-	return genericCompareBuffer(r, SVG)
-}
-
 func IsMp4(r io.ReadSeeker) bool {
 	buff, err := checkBuffer(r, MP4_0)
 	if len(buff) < 9 {
